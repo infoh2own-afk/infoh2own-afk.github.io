@@ -6,55 +6,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #0f172a, #111827);
+      background: #0f172a;
       color: #e5e7eb;
+      line-height: 1.6;
     }
 
     .container {
       max-width: 1100px;
       margin: auto;
-      padding: 100px 20px;
+      padding: 60px 20px;
     }
 
     h1 {
-      font-size: 52px;
+      font-size: 48px;
       line-height: 1.2;
       margin-bottom: 20px;
     }
 
     h2 {
-      font-size: 34px;
-      margin-bottom: 40px;
+      font-size: 32px;
+      margin-bottom: 30px;
       text-align: center;
     }
 
     p {
       font-size: 18px;
       color: #cbd5e1;
-      max-width: 700px;
     }
 
+    /* HERO SECTION */
     .hero {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      padding: 100px 20px 80px;
       text-align: center;
-      padding-top: 120px;
-      padding-bottom: 120px;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(to bottom, transparent, #0b1220);
     }
 
     .highlight {
       color: #3b82f6;
     }
 
+    /* BUTTONS */
     .btn {
       display: inline-block;
-      padding: 14px 30px;
+      padding: 14px 28px;
       border-radius: 8px;
       font-weight: 600;
       text-decoration: none;
-      margin: 15px 10px 0 10px;
-      transition: 0.3s ease;
+      margin: 20px 10px 0 10px;
+      transition: 0.3s;
     }
 
     .btn-primary {
@@ -64,7 +82,7 @@
 
     .btn-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.4);
     }
 
     .btn-outline {
@@ -77,51 +95,54 @@
       color: white;
     }
 
-    .section {
-      padding: 100px 20px;
-    }
-
-    .dark-section {
+    /* SECTIONS */
+    .section-dark {
       background: #0b1220;
     }
 
+    .section-light {
+      background: linear-gradient(135deg, #111827, #0f172a);
+    }
+
+    /* CARDS */
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
     }
 
     .card {
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.08);
       padding: 30px;
-      border-radius: 16px;
-      backdrop-filter: blur(10px);
-      transition: 0.3s ease;
+      border-radius: 14px;
+      transition: 0.3s;
     }
 
     .card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-6px);
       border-color: #3b82f6;
     }
 
     .card h3 {
-      margin-top: 0;
-      color: #ffffff;
+      margin-bottom: 15px;
+      color: white;
     }
 
-    .center {
+    /* CTA SECTION */
+    .cta {
       text-align: center;
-      margin: auto;
     }
 
     footer {
       background: #070d18;
+      padding: 30px 20px;
       text-align: center;
-      padding: 40px 20px;
       color: #94a3b8;
       font-size: 14px;
     }
+
   </style>
 </head>
 
@@ -131,28 +152,25 @@
   <div class="hero">
     <div class="container">
       <h1>Rank on Google Maps & Get <span class="highlight">Consistent Local Enquiries</span></h1>
-      <p class="center">
-        Helping manufacturers and contractors in Kolkata dominate Google Search & Maps with strategic Local SEO.
-      </p>
+      <p>Helping manufacturers and contractors in Kolkata generate qualified B2B leads through strategic Local SEO.</p>
       <a class="btn btn-primary" href="https://wa.me/919330629573">Get Free SEO Audit</a>
       <a class="btn btn-outline" href="https://wa.me/919330629573">Chat on WhatsApp</a>
     </div>
   </div>
 
-
   <!-- SERVICES -->
-  <div class="section dark-section">
+  <div class="section-dark">
     <div class="container">
       <h2>Services</h2>
       <div class="cards">
         <div class="card">
           <h3>Google Business Profile Optimization</h3>
-          <p>Rank in the Top 3 Google Map results and increase direct calls & enquiries.</p>
+          <p>Rank in Top 3 Map Pack and increase direct calls & enquiries.</p>
         </div>
 
         <div class="card">
           <h3>Local SEO Setup</h3>
-          <p>On-page, technical fixes, and local authority signals for consistent ranking.</p>
+          <p>Technical fixes, on-page optimization and local authority signals.</p>
         </div>
 
         <div class="card">
@@ -163,30 +181,27 @@
     </div>
   </div>
 
-
   <!-- PROCESS -->
-  <div class="section">
+  <div class="section-light">
     <div class="container">
       <h2>My 4-Step Local SEO Framework</h2>
       <div class="cards">
-        <div class="card"><h3>1. Audit</h3><p>Business & competitor analysis to identify growth gaps.</p></div>
-        <div class="card"><h3>2. Optimize</h3><p>Google Business Profile & website improvements.</p></div>
-        <div class="card"><h3>3. Authority</h3><p>Build local trust signals & citations.</p></div>
-        <div class="card"><h3>4. Growth</h3><p>Ongoing tracking, reporting & performance scaling.</p></div>
+        <div class="card"><h3>1. Audit</h3><p>Business & competitor research to find growth gaps.</p></div>
+        <div class="card"><h3>2. Optimize</h3><p>Google profile & website structured improvements.</p></div>
+        <div class="card"><h3>3. Authority</h3><p>Build citations & local trust signals.</p></div>
+        <div class="card"><h3>4. Growth</h3><p>Monthly tracking and ranking improvement.</p></div>
       </div>
     </div>
   </div>
 
-
   <!-- CTA -->
-  <div class="section dark-section">
-    <div class="container center">
+  <div class="section-dark">
+    <div class="container cta">
       <h2>Ready to Grow Your Local Visibility?</h2>
-      <p>Book a free strategy discussion and discover how your business can generate consistent enquiries from Google.</p>
+      <p>Book a free strategy discussion and start generating consistent enquiries from Google.</p>
       <a class="btn btn-primary" href="https://wa.me/919330629573">Book Free Strategy Call</a>
     </div>
   </div>
-
 
   <footer>
     © 2026 Subhajit | Local SEO Consultant | Kolkata, India
